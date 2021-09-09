@@ -19,7 +19,7 @@ namespace Bakery.Tests
       Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
       Assert.AreEqual(totalCost, ResultTotalCost);
     }
-   /* [TestMethod]
+    [TestMethod]
     public void PastryCost_CalcutateTheCostWithDiscount_MoreThanThree()
     {
       int quantityOfPastry = 4;
@@ -30,7 +30,7 @@ namespace Bakery.Tests
       Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
       Assert.AreEqual(totalCost, 7);
     }
-    [TestMethod]
+   /* [TestMethod]
     public void BreadDiscount_CalcutateTheCostWithDiscount_MoreThanfive()
     {
       int quantityOfBread = 6;
