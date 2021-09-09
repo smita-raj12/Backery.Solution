@@ -31,7 +31,7 @@ namespace Bakery.Tests
       Assert.AreEqual(totalCost, 7);
     }
     [TestMethod]
-  public void PastryCost_CalcutateTheCostWithDiscountFor_FivePastries()
+    public void PastryCost_CalcutateTheCostWithDiscountFor_FivePastries()
     {
       int quantityOfPastry = 5;
       int totalCost = 9;
@@ -41,16 +41,16 @@ namespace Bakery.Tests
       Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
       Assert.AreEqual(totalCost, 9);
     }
-    /*[TestMethod]
-    public void BreadCost_CalcutateTheCost_WithOneBread()
+    [TestMethod]
+    public void PastryCost_CalcutateTheCostWithDiscountFor_SixPastries()
     {
-      int quantityOfBread = 1;
-      int totalCost = 5;
-      Bread bread = new Bread(quantityOfBread, totalCost);
-      int resultQuantityOfBread = bread.QuantityOfBread;
-      int ResultTotalCost = bread.TotalCost;
-      Assert.AreEqual(quantityOfBread, resultQuantityOfBread);
-      Assert.AreEqual(totalCost, 5);
-    }*/
+      int quantityOfPastry = 6;
+      int totalCost = 10;
+      Pastry pastry = new Pastry(quantityOfPastry, totalCost);
+      int resultQuantityOfPastry = pastry.QuantityOfPastry;
+      int ResultTotalCost = pastry.TotalCost;
+      Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
+      Assert.AreEqual(totalCost, 10);
+    }
   }
 }  
