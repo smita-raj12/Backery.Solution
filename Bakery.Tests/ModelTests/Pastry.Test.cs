@@ -52,5 +52,16 @@ namespace Bakery.Tests
       Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
       Assert.AreEqual(totalCost, 10);
     }
+    [TestMethod]
+    public void PastryCost_CalcutateTheCostFor_TwoPastries()
+    {
+      int quantityOfPastry = 2;
+      int totalCost = 4;
+      Pastry pastry = new Pastry(quantityOfPastry, totalCost);
+      int resultQuantityOfPastry = pastry.QuantityOfPastry;
+      int ResultTotalCost = pastry.TotalCost;
+      Assert.AreEqual(quantityOfPastry, resultQuantityOfPastry);
+      Assert.AreEqual(totalCost, 4);
+    }
   }
 }  
