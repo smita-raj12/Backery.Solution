@@ -19,11 +19,15 @@ namespace  Bakery.Models
       int freePastry = quantityOfPastry/3;
       if (quantityOfPastry % 3 == 0)
       {
-        TotalCost = (OnePastryCost * quantityOfPastry) - (freePastry);
+        TotalCost = (OnePastryCost * quantityOfPastry) - freePastry;
+      }
+      else if(quantityOfPastry < 3)
+      {
+        TotalCost = OnePastryCost * quantityOfPastry;
       }
       else
       {
-        TotalCost = OnePastryCost * quantityOfPastry;
+         TotalCost = (OnePastryCost * quantityOfPastry) - 1;
       }
       return TotalCost;
     }

@@ -18,7 +18,6 @@ namespace Bakery
       Console.WriteLine("Enter your choice, For bread type bread or type pastry");
       string UserChoice = Console.ReadLine();
       
-
       if(UserChoice == "bread")
       {
         program.BreadOrder();
@@ -40,16 +39,44 @@ namespace Bakery
       UserQuantity = int.Parse(UserSelectedQuantity);
       bread.TotalCost = bread.BreadCost(UserQuantity);
       Console.WriteLine($"Your total bread cost ${bread.TotalCost}");
+      Console.WriteLine("Would you like to order some pastries(if yes type y or type checkout");
+      string UserInput = Console.ReadLine();
+      if(UserInput == "y" || UserInput == "Y")
+      {
+        PastryOrder();
+      }
+      else
+      {
+        FinalCost();
+      }
       return bread.TotalCost;
     }
     public int PastryOrder()
     {
-      Console.WriteLine("How many loaf of bread you like to order");
+      Console.WriteLine("How many pastries you like to order");
       string UserSelectedQuantity = Console.ReadLine();
       int UserQuantity = int.Parse(UserSelectedQuantity);
       pastry.TotalCost = pastry.PastryCost(UserQuantity);
       Console.WriteLine($"Your total Pastry cost ${pastry.TotalCost}");
+      Console.WriteLine("Would you like to order some Breads(if yes type y or type checkout");
+      string UserInput = Console.ReadLine();
+      if(UserInput == "y" || UserInput == "Y")
+      {
+        BreadOrder();
+      }
+      else
+      {
+        FinalCost();
+      }
       return pastry.TotalCost;
+    }
+    public int FinalCost()
+    {
+      int FinalCost = bread.TotalCost + pastry.TotalCost;
+      Console.WriteLine($"Your total Pastry cost ${FinalCost}");
+      Console.WriteLine("Thanks for selecting Pierre's Bakery");
+      Console.WriteLine("Come again");
+      return FinalCost;
     }
   }
 }    
