@@ -12,7 +12,7 @@ namespace  Bakery.Models
       QuantityOfPastry = quantityOfPastry;
       TotalCost = totalCost;
     }
-    
+
     public int PastryCost(int quantityOfPastry)
     {
       int OnePastryCost = 2;
